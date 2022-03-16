@@ -2,7 +2,6 @@ import React from 'react'
 import { useRecoilState } from 'recoil'
 import useSpotify from '../hooks/useSpotify'
 import millisToMinutesAndSeconds from '../lib/time'
-import { currentTrackIdState, isPlayingState } from '../atoms/songAtom'
 
 const Song = ({ key, track, order }) => {
   const spotifyApi = useSpotify()
@@ -29,7 +28,6 @@ const Song = ({ key, track, order }) => {
         </p>
         <p>{millisToMinutesAndSeconds(track.track.duration_ms)}</p>
       </div>
-
     </div>
   )
 }
